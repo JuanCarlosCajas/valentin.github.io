@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kanit:wght@300&family=Single+Day&display=swap');
+
+
+body{
+    background-color: #3E3D42;
+    font-family: 'Kanit';
+}
+
+/* Contenedor de todas las cartas */
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 2fr);
+    margin-top: 0;
+}
+
+/*Contiene todos los elementos de la carta
+para alguien muy especial*/
+.flip-card-title, .flip-card, .flip-card2, .flip-card3, .flip-card4, .flip-card5, .flip-card6{
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    margin: 10px auto;
+}
+
+/*Contiene todos los lados y elementos de la carta del titulo*/
+.flip-card-title{
+    background-color: transparent;
+    width: 400px;
+    height: 65px;
+    margin: 30px auto;
+}
+
+/* Este container es necesitado para
+posicionar el lado de adelante y el lado 
+de atrás*/
+.flip-card-inner-title, .flip-card-inner, .flip-card-inner2, .flip-card-inner3, .flip-card-inner4, .flip-card-inner5, .flip-card-inner6{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/*Hace un horizontal flip cuando mueves tu mouse
+encima de la carta */ 
+.flip-card-title:hover .flip-card-inner-title ,.flip-card:hover .flip-card-inner, .flip-card2:hover .flip-card-inner2, .flip-card3:hover .flip-card-inner3, .flip-card4:hover .flip-card-inner4, .flip-card5:hover .flip-card-inner5, .flip-card6:hover .flip-card-inner6{
+    transform: rotateY(180deg);
+    border: none;
+}
+
+/* Posicion del lado de atras y adelante */
+.flip-card-front-title, .flip-card-back-title, .flip-card-front, .flip-card-back, .flip-card-front2, .flip-card-back2,.flip-card-front3, .flip-card-back3, .flip-card-front4, .flip-card-back4, .flip-card-front5, .flip-card-back5, .flip-card-front6, .flip-card-back6{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Estilo de adelante */
+.flip-card-front{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 100px;
+}
+
+.flip-card-front2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 100px;
+}
+
+.flip-card-front3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 100px;
+}
+
+.flip-card-front4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 100px;
+}
+
+.flip-card-front5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 100px;
+}
+
+.flip-card-front6{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 5px solid #000;
+    font-size: 100px;
+}
+
+/* Estilo del item dentro de la carta front */
+.flip-card-front p{
+    animation: heart .5s infinite alternate linear;
+}
+
+
+
+/* Estilo de atrás */
+.flip-card-back{
+    font-family: 'Single day';
+    background-color: #DA2F2F;
+    color: white;
+    overflow-wrap: break-word;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back2{
+    font-family: 'Single day';
+    background-color: #DCA922;
+    color: #fff;
+    overflow-wrap: break-word;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back3{
+    font-family: 'Single day';
+    background-color: #226EDC;
+    color: #fff;
+    overflow-wrap: break-word;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back4{
+    font-family: 'Single day';
+    background-color: #FE5201;
+    color: #fff;
+    overflow-wrap: break-word;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back5{
+    font-family: 'Single day';
+    background-color: #8A12E9;
+    color: #fff;
+    overflow-wrap: break-word;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back6{
+    font-family: 'Single day';
+    background-color: #05FA80;
+    color: #fff;
+    overflow-wrap: break-word;
+    transform: rotateY(180deg);
+}
+
+/* Estilo de titulo de la parte de adelante */
+.flip-card-front-title{
+    background-color: #fff;
+    color: #000;
+    border: 5px solid #000;
+}
+
+/* Estilo de titulo de la parte de atrás */
+.flip-card-back-title{
+    background-color: #fff;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+/* Estilo de los iconos */
+
+.flip-card-front i{
+    color: #DA2F2F;
+}
+
+.flip-card-front2 i{
+    color: #DCA922;
+}
+
+.flip-card-front3 i{
+    color: #226EDC;
+}
+
+.flip-card-front4 i {
+    color: #FE5201;
+}
+
+.flip-card-front5 i{
+    color: #8A12E9;
+}
+
+.flip-card-front6 i{
+    color: #05FA80;
+}
+
+@keyframes heart{
+    from{
+        transform: scale(.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
